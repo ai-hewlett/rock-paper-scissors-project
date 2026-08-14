@@ -23,11 +23,11 @@ console.log(getComputerChoice());
 // tell user to input one of the 3 words
 
 function getHumanChoice() {
-    let human = window.prompt("Play your hand!");
+    let human = prompt("Play your hand!");
     return human;
 }
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
 // Step 4 - Players Score
 // create a var to get the humanScore - global scope and initial value of 0
@@ -42,16 +42,16 @@ let computerScore = 0;
 // increment both scores by one
 
 function playRound(humanChoice, computerChoice) {
-    getHumanChoice().toLowerCase();
-    if (humanChoice === "rock" && computerChoice === "scissors") {
-        humanScore++
-        console.log ("Human won! Rock beats scissors!");
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        computerScore++
-        console.log ("Computer won! Rock beats scissors!");
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        computerScore++
-        console.log ("Human won! Paper beats rock!"); 
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie!!!");
+    } else if ((humanChoice === "rock" && computerChoice === "scissors") ||(humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissors" && computerChoice === "paper")) {
+        humanScore++;
+        console.log(`Human wins! ${humanChoice} beats ${computerChoice}!`);
+    } else {
+        computerScore++;
+        console.log(`Computer wins! ${computerChoice} beats ${humanChoice}!`);
+    }
 }
 
 const humanSelection = getHumanChoice();
