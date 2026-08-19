@@ -1,9 +1,4 @@
 // Step 2 - Computer Choice
-// create function getComputerChoice
-// random(number) { return Math.floor(Math.random() * number);
-//tell function to select a number at random between 0 -2
-//give each number a result for one of the words)
-//return words
 
 function getComputerChoice() { 
     const num = Math.floor(Math.random() * 3);
@@ -19,8 +14,6 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 // Step 3 - Human Choice
-// create function getHumanChoice
-// tell user to input one of the 3 words
 
 function getHumanChoice() {
     let human = prompt("Play your hand!");
@@ -30,18 +23,12 @@ function getHumanChoice() {
 // console.log(getHumanChoice());
 
 // Step 4 - Players Score
-// create a var to get the humanScore - global scope and initial value of 0
-// create a var to get the computerScore - global scope and initial value of 0
 
 // MY CODE BEFORE MOVING TO STEP 6:
 // let humanScore = 0;
 // let computerScore = 0;
 
 // Step 5 - Single Round
-// create function playRound with 2 param: humanChoice & computerChoice
-// humanChoice is case-insensitive
-// console.log representing round winner
-// increment both scores by one
 
 // MY CODE BEFORE MOVING TO STEP 6:
 // function playRound(humanChoice, computerChoice) {
@@ -57,18 +44,12 @@ function getHumanChoice() {
 //     }
 // }
 
-// MY CODE BEFORE MOVING TO STEP 6:
 // const humanSelection = getHumanChoice();
 // const computerSelection = getComputerChoice();
 
 // playRound(humanSelection, computerSelection);
 
 // Step 6 - Game Logic
-// Create function playGame
-// Move playRound and score vars inside new function
-// Call playRound 5x
-// Recall the choice functions to get new choices for each round
-// May want to change the return values to something more useful
 
 function playGame() {
     let humanScore = 0;
